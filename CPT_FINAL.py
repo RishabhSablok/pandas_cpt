@@ -11,8 +11,8 @@ player2_y = HEIGHT//2
 
 ball_y = HEIGHT//2
 ball_x = WIDTH//2
-deltax = random.uniform(1.8, 2.1)
-deltay = random.uniform(1.8, 2.1)
+deltax = random.uniform(1.5, 2.1)
+deltay = random.uniform(1.5, 2.1)
 deltax, deltay = 6, 7
 points, points2 = 0, 0
 
@@ -43,14 +43,14 @@ def on_update(delta_time):
             points2 += 1
             ball_x = WIDTH//2
             ball_y = HEIGHT//2
-            deltax, deltay = random.choice([-1, 1])*(random.randint(5, 7)), random.choice([-1, 1])*random.randint(5, 7)
+            deltax, deltay = random.choice([-1, 1])*(random.uniform(3, 5)), random.choice([-1, 1])*random.uniform(3, 5)
     
     if ball_x > WIDTH-40:
         if ball_x < WIDTH-40:
             points += 1
             ball_x = WIDTH//2
             ball_y = HEIGHT//2
-            deltax, deltay = random.choice([-1, 1])*(random.randint(5, 7)), random.choice([-1, 1])*random.randint(5, 7)
+            deltax, deltay = random.choice([-1, 1])*(random.uniform(3, 5)), random.choice([-1, 1])*random.uniform(3, 5)
             
         elif player2_y - 30 < ball_y and player2_y + 30 > ball_y:
             if deltax < 2:
@@ -61,7 +61,7 @@ def on_update(delta_time):
             points += 1
             ball_x = WIDTH//2
             ball_y = HEIGHT//2
-            deltax, deltay = random.choice([-1, 1])*(random.randint(5, 7)), random.choice([-1, 1])*random.randint(5, 7)
+            deltax, deltay = random.choice([-1, 1])*(random.uniform(3, 5)), random.choice([-1, 1])*random.uniform(3, 5)
     
 
     if up_pressed and player_y < HEIGHT-35:
